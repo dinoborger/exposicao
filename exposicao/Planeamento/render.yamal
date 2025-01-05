@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: atlas-planeamento
+    env: static
+    buildCommand: null  # Se não precisar de build
+    staticPublishPath: ./  # Diretório onde estão seus arquivos HTML
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
+
